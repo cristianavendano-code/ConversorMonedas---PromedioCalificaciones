@@ -23,4 +23,20 @@ document.getElementById('btnCalcular').addEventListener('click', () => {
         estatusInput.value = "Reprobado";
         estatusInput.style.color = "red";
     }
+
+});
+
+document.getElementById('btnLimpiar').addEventListener('click', () => {
+    
+    document.getElementById('nombre').value = '';
+    document.getElementById('unidad1').value = '';
+    document.getElementById('unidad2').value = '';
+    document.getElementById('unidad3').value = '';
+
+    document.getElementById('promedio').value = '0.0';
+    document.getElementById('estatus').value = '-';
+
+    document.getElementById('estatus').style.color = '#333';
+
+    document.getElementById('nombre').focus();
 });
