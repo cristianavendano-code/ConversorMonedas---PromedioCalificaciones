@@ -1,0 +1,165 @@
+/* Reset y Fuente Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Fondo degradado moderno */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Contenedor Principal */
+.main-container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Encabezado */
+header {
+    margin-bottom: 3rem;
+    animation: fadeInDown 1s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+/* Grid de Proyectos */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap; /* Para que se adapte a celulares */
+    justify-content: center;
+    gap: 2rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Tarjetas (Cards) */
+.project-card {
+    background: #ffffff;
+    width: 280px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Efecto Hover en la Tarjeta */
+.project-card:hover {
+    transform: translateY(-15px); /* Se levanta más */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Cajas de Iconos con colores específicos */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Color específico para la tarjeta académica */
+.card-academic .icon-box {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
+
+/* Color específico para la tarjeta de dinero */
+.card-finance .icon-box {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+    box-shadow: 0 5px 15px rgba(56, 249, 215, 0.4);
+}
+
+/* Textos dentro de la tarjeta */
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Botón inferior falso */
+.go-btn {
+    background: #f8f9fa;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    border-top: 1px solid #eee;
+    transition: background 0.3s, color 0.3s;
+}
+
+.project-card:hover .go-btn {
+    background: #333;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* Animaciones simples de entrada */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}

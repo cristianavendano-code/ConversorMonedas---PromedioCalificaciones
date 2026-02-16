@@ -1,0 +1,81 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); /* Fondo verde moderno */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.converter-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.card-header { color: #11998e; margin-bottom: 20px; }
+.card-header h1 { font-size: 1.5rem; margin-top: 10px; }
+
+/* Input estilizado con símbolo de moneda */
+.input-group { text-align: left; margin-bottom: 20px; }
+.input-group label { display: block; color: #666; margin-bottom: 5px; font-size: 0.9rem; }
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 15px;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 10px 12px 35px; /* Espacio para el símbolo $ */
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus { border-color: #11998e; }
+
+/* Área de Resultado */
+.result-area {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.result-area h2 { font-size: 2rem; color: #333; margin: 5px 0; }
+.result-area small { color: #888; font-size: 0.8rem; }
+
+/* Botones */
+.buttons-container { display: flex; gap: 10px; }
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.9; transform: scale(0.98); }
+
+.primary { background-color: #11998e; color: white; }
+.secondary { background-color: #e0e0e0; color: #555; }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="converter-card">
+        <div class="card-header">
+            <i class="fa-solid fa-money-bill-transfer fa-3x"></i>
+            <h1>MXN a USD</h1>
+        </div>
+
+        <div class="card-body">
+            <div class="input-group">
+                <label for="inputPesos">Monto en Pesos Mexicanos</label>
+                <div class="input-wrapper">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" id="inputPesos" placeholder="0.00" min="0">
+                </div>
+            </div>
+
+            <div class="result-area">
+                <p>Resultado en Dólares:</p>
+                <h2 id="resultadoDisplay">$0.00 USD</h2>
+                <small id="tasaInfo">Tasa de cambio: --</small>
+            </div>
+
+            <div class="buttons-container">
+                <button id="btnConvertir" class="btn primary">Convertir</button>
+                <button id="btnLimpiar" class="btn secondary">Limpiar</button>
+                <button class="btn secondary" onclick="window.location.href='../index.html'"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

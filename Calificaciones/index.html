@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Calificaciones</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>Control de Notas</h2>
+            <p>Sistema de evaluación</p>
+        </div>
+
+        <div class="card-body">
+            <div id="notasForm"> 
+                <div class="input-group">
+                    <label for="nombre"><i class="fa-solid fa-user"></i> Nombre del Estudiante</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <label class="section-label">Calificaciones</label>
+                <div class="grid-inputs">
+                    <div class="input-box">
+                        <label for="unidad1">U1</label>
+                        <input type="number" id="unidad1" min="0" max="10" step="0.1" placeholder="0.0">
+                    </div>
+                    <div class="input-box">
+                        <label for="unidad2">U2</label>
+                        <input type="number" id="unidad2" min="0" max="10" step="0.1" placeholder="0.0">
+                    </div>
+                    <div class="input-box">
+                        <label for="unidad3">U3</label>
+                        <input type="number" id="unidad3" min="0" max="10" step="0.1" placeholder="0.0">
+                    </div>
+                </div>
+
+                <div class="results-card">
+                    <div class="result-item">
+                        <span>Promedio</span>
+                        <input type="text" id="promedio" readonly value="0.0" class="result-input">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="result-item">
+                        <span>Estatus</span>
+                        <input type="text" id="estatus" readonly value="-" class="result-input">
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="button" id="btnCalcular" class="btn-submit">Calcular</button>
+                    
+                    <button type="button" id="btnLimpiar" class="btn-submit" style="background-color: #95a5a6;">Limpiar</button>
+
+                    <button class="btn-submit" style="background-color: #95a5a6;" onclick="window.location.href='../index.html'"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    
+    <style>
+        .result-input {
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            width: 100%;
+            outline: none;
+        }
+    </style>
+</body>
+</html>

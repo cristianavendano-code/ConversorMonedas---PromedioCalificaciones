@@ -1,0 +1,167 @@
+/* Reset y Fuente */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fondo degradado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* La Tarjeta Principal */
+.card {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    overflow: hidden; /* Para que el header respete los bordes redondos */
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
+}
+
+/* Encabezado de la Tarjeta */
+.card-header {
+    background: #4a69bd;
+    padding: 25px 20px;
+    text-align: center;
+    color: white;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-header p {
+    margin-top: 5px;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Cuerpo de la Tarjeta */
+.card-body {
+    padding: 25px;
+}
+
+/* Inputs y Etiquetas */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+    background-color: #f9fafb;
+}
+
+input:focus {
+    border-color: #4a69bd;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 105, 189, 0.1);
+}
+
+/* Grid para Unidades */
+.section-label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.grid-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Sección de Resultados Integrada */
+.results-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f4f6f9;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    text-align: center;
+    flex: 1;
+    padding: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.result-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 4px;
+}
+
+.result-item strong {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background-color: #ddd;
+}
+
+/* Botón */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #4a69bd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(74, 105, 189, 0.3);
+}
+
+.btn-submit:hover {
+    background: #3c5aa6;
+    transform: scale(0.98);
+}
