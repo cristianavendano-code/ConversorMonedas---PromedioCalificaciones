@@ -14,4 +14,16 @@ document.getElementById('btnConvertir').addEventListener('click', () => {
 
     document.getElementById('resultadoDisplay').innerText = dolares;
     document.getElementById('tasaInfo').innerText = `Tasa usada: $${tasa}`;
+
+});
+
+document.getElementById('btnLimpiar').addEventListener('click', () => {
+    
+    document.getElementById('inputPesos').value = '';
+
+    document.getElementById('resultadoDisplay').innerText = '$0.00 USD';
+    
+    document.getElementById('tasaInfo').innerText = 'Tasa de cambio: --';
+
+    document.getElementById('inputPesos').focus();
 });
